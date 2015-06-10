@@ -1,6 +1,6 @@
 {
   "name": "renamer-garden-tool",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A tool to easily iterate over a folder of items and rename them to the same string appended by a number.",
   "main": "index.js",
   "directories": {
