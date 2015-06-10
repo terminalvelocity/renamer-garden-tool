@@ -7,8 +7,11 @@ class Renamer {
   
   constructor(srcDir, newNameBase, destDir) {
     this.srcDir = srcDir || './src'
-    this.destDir = newNameBase || `./dist`
-    this.newName = newNameBase || `Seeds.js-Logo-Comp`    
+    this.destDir = destDir || `./dest`
+    this.newName = newNameBase || `Seeds.js-Logo-Comp`
+    cli.validate(this.srcDir, 'String')    
+    cli.validate(this.destDir, 'String')    
+    cli.validate(this.newName, [])    
   } 
   
   do() {
@@ -26,6 +29,14 @@ class Renamer {
   get src() {
     cli.debug('this.srcDir')
     return fs.readdirSync(this.srcDir)
+  }
+
+  static validate(input, typeSample) {
+    if (input.constructor.name === typeSample.constructor.name) {
+      return input
+    } else {
+      return new TypeError(`Expected ${input} to be an instance of ${typeSample.constructor.name} `)
+    }
   } 
 
   static test() {
@@ -66,7 +77,12 @@ and rename them to the same string appended by a number.
   }
 
   static notes() {return(
-`${'Note:'.yellow()} Currently this implementation is naive and has no tests written. PR's accepted. Conversation highly encouraged.`)
+`
+${'Note:'.yellow()} 
+        Currently TypeChecking interface is not working 100%,
+        the implementation is naive and has no tests written. 
+        PR's accepted. Conversation highly encouraged.
+`)
   }
 }
 
