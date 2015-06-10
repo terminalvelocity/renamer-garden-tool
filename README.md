@@ -26,23 +26,5 @@ renamer.help // getter that returns the static method as an instance method
 
 outputs
 
-
-```
-Renamer: A tool to easily iterate over a folder of items
-and rename them to the same string appended by a number.
-
-      
-Inputs: String srcDir
-        String newNameBase
-
-      
-Usage: 
-        var Renamer = require('renamer-garden-tool')
-        var renamer = new Renamer(srcDir, newNameBase)
-        renamer.do()
-
-      
-Note: Currently this implementation is naive and has no tests written. 
-PR's accepted. Conversation highly encouraged.
-```
+[![](screenshot.png)]
 
