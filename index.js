@@ -32,7 +32,7 @@ class Renamer {
   }
 
   static validate(input, typeSample) {
-    if (input.constructor.name === typeSample.constructor.name) {
+    if (input instanceof typeSample.constructor) {
       return input
     } else {
       return new TypeError(`Expected ${input} to be an instance of ${typeSample.constructor.name} `)
