@@ -9,9 +9,9 @@ class Renamer {
     this.srcDir = srcDir || './src'
     this.destDir = destDir || `./dest`
     this.newName = newNameBase || `Seeds.js-Logo-Comp`
-    cli.validate(this.srcDir, 'String')    
-    cli.validate(this.destDir, 'String')    
-    cli.validate(this.newName, [])    
+    Renamer.validate(this.srcDir, 'String')    
+    Renamer.validate(this.destDir, 'String')    
+    Renamer.validate(this.newName, 'String')    
   } 
   
   do() {
