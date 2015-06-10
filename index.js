@@ -77,8 +77,7 @@ and rename them to the same string appended by a number.
   }
 
   static notes() {return(
-`
-${'Note:'.yellow()} 
+`${'Note:'.yellow()} 
         Currently TypeChecking interface is not working 100%,
         the implementation is naive and has no tests written. 
         PR's accepted. Conversation highly encouraged.
